@@ -67,8 +67,9 @@ function decode(expr) {
             morse = '';
         }
         morse += expr[i];
+        if (i == expr.length - 1 ) result += getChar(morse);
     }
-    return result;
+    return result.trim();
 }
 
 module.exports = {
